@@ -6,7 +6,7 @@
   </DubsBadHygiene.DefExtensions>
   
   <DubsBadHygiene.DubsModOptions>
-    <defName>PipeVisibility</defName>
+	  <defName>PipeVisibility</defName>
     <label>Pipe visibility</label>
     <AutoList>false</AutoList>
     <defaultSetting>1</defaultSetting>
@@ -25,7 +25,8 @@
   </DubsBadHygiene.DubsModOptions>
   
   <DubsBadHygiene.DubsModOptions>
-    <defName>HygieneRateD</defName>
+	  <AddonPack>Lite</AddonPack>
+	  <defName>HygieneRateD</defName>
     <label>Hygiene need rate</label>
     <defaultSetting>10</defaultSetting>
     <tip>How fast hygiene need decreases</tip>
@@ -114,7 +115,8 @@
   </DubsBadHygiene.DubsModOptions>
 
   <DubsBadHygiene.DubsModOptions>
-    <defName>BladderRateD</defName>
+	  <AddonPack>Lite</AddonPack>
+	  <defName>BladderRateD</defName>
     <label>Bladder need rate</label>
     <defaultSetting>10</defaultSetting>
     <tip>How fast bladder need decreases</tip>
