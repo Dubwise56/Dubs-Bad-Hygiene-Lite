@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-
 	<ThingDef Name="BasedHygieneMom" Abstract="True">
 		<category>Building</category>
 		<thingClass>Building</thingClass>
@@ -450,6 +449,24 @@
 	</ThingDef>
 
 	<ThingDef ParentName="DubsDirtyBasinBase">
+		<defName>BasinStuff</defName>
+		<label>basin</label>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Woody</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<costList>
+			<Steel>5</Steel>
+		</costList>
+		<costStuffCount>10</costStuffCount>
+		<researchPrerequisites>
+			<li MayRequire="dbhlitemode">Plumbing</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	
+	<ThingDef ParentName="DubsDirtyBasinBase" DBHThirst="true">
 		<defName>Fountain</defName>
 		<label>fountain</label>
 		<description>A water fountain used for drinking and washing.</description>
@@ -474,24 +491,7 @@
 		</researchPrerequisites>
 	</ThingDef>
 
-	<ThingDef ParentName="DubsDirtyBasinBase">
-		<defName>BasinStuff</defName>
-		<label>basin</label>
-		<stuffCategories>
-			<li>Metallic</li>
-			<li>Woody</li>
-			<li>Stony</li>
-		</stuffCategories>
-		<costList>
-			<Steel>5</Steel>
-		</costList>
-		<costStuffCount>10</costStuffCount>
-		<researchPrerequisites>
-			<li MayRequire="dbhlitemode">Plumbing</li>
-		</researchPrerequisites>
-	</ThingDef>
-
-	<ThingDef ParentName="DubsDirtyBasinBase">
+	<ThingDef ParentName="DubsDirtyBasinBase" DBHThirst="true">
 		<defName>KitchenSink</defName>
 		<label>kitchen sink</label>
 		<description>Everything but a kitchen sink. Increases room cleanliness.</description>
@@ -580,15 +580,15 @@
 	<ThingDef ParentName="DubsDirtyTerletBase" Name="AdvTerletBase" Abstract="True">
 		<defName>ToiletAdv</defName>
 		<thingClass>DubsBadHygiene.Building_AdvToilet</thingClass>
-		<description>Twice as water efficient as a standard toilet. Provides the optimum multi-functional experience with automatic cleansing and deodorization.\n7L per use</description>
+		<description>Comfortable, self cleaning, unblockable, super efficient smart toilet. Provides the optimum multi-functional experience with automatic cleansing and deodorization.\n7L per use</description>
 		<graphicData>
-			<texPath>DBH/Things/Building/Toilets/toilet</texPath>
+			<texPath>DBH/Things/Building/Toilets/adv/toilet</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 		</graphicData>
 		<statBases>
 			<WorkToBuild>1950</WorkToBuild>
-			<Beauty>4</Beauty>
-			<Comfort>0.5</Comfort>
+			<Beauty>6</Beauty>
+			<Comfort>1</Comfort>
 		</statBases>
 		<comps>
 			<li Class="CompProperties_Power">
@@ -619,6 +619,54 @@
 
 
 	<!-- Baths -->
+
+	<ThingDef ParentName="BasedHygieneMom">
+		<defName>BathMat</defName>
+		<label>Bath Mat</label>
+		<description>A small mat used next to a bathtub to absorb water.</description>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>DBH/Things/Building/BathMat</texPath>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+		<size>(1,1)</size>
+		<stuffCategories>
+			<li>Fabric</li>
+		</stuffCategories>
+		<costStuffCount>20</costStuffCount>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Beauty>8</Beauty>
+			<Flammability>1.0</Flammability>
+			<Mass>2.5</Mass>
+			<WorkToBuild>800</WorkToBuild>
+		</statBases>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<passability>Standable</passability>
+		<selectable>true</selectable>
+		<useHitPoints>true</useHitPoints>
+		<rotatable>true</rotatable>
+		<comps>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			<li Class="CompProperties_Art">
+				<nameMaker>NamerArtFurniture</nameMaker>
+				<descriptionMaker>ArtDescription_Furniture</descriptionMaker>
+				<minQualityForArtistic>Awful</minQualityForArtistic>
+			</li>
+		</comps>
+		<thingCategories>
+			<li>BuildingsFurniture</li>
+		</thingCategories>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<inspectorTabs>
+			<li>ITab_Art</li>
+		</inspectorTabs>
+	</ThingDef>
+
+
+
 	<ThingDef ParentName="BasedFixture" Name="DubsDirtyBathtubBase" Abstract="True">
 		<description>Slow to use, but very comfortable. Can be heated by placing an adjacent campfire or log boiler, or via plumbed hot water tanks. Does not require a sewage outlet.\n190L per wash</description>
 		<thingClass>DubsBadHygiene.Building_bath</thingClass>
