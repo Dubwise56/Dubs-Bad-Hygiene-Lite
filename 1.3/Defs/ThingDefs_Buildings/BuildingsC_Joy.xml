@@ -84,6 +84,7 @@
     </filthAcceptanceMask>
     <tags>
       <li>Water</li>
+	    <li>FineFloor</li>
     </tags>
     <tools>
       <li>
@@ -179,7 +180,7 @@
       <drawSize>(11,7)</drawSize>
       <texPath>DBH/Things/Building/Pool1</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
-      <shaderType>CutoutComplex</shaderType>
+      <shaderType>Cutout</shaderType>
     </graphicData>
     <statBases>
       <MaxHitPoints>1500</MaxHitPoints>
@@ -219,6 +220,7 @@
   <ThingDef ParentName="BasedFixture" Name="DubsHotTubBase">
     <description>Hot tub used for hydrotherapy, relaxation, or pleasure. Filled with water from water towers on first use. Self-heated and does not require a sewage outlet.</description>
     <thingClass>DubsBadHygiene.Building_HotTub</thingClass>
+	  <castEdgeShadows>True</castEdgeShadows>
     <defName>HotTub</defName>
     <label>hot tub</label>
     <costList>
