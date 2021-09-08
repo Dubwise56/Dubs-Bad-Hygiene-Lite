@@ -50,7 +50,7 @@
 		<giverClass>DubsBadHygiene.WorkGiver_AdministerFluids</giverClass>
 		<workType>Doctor</workType>
 		<verb>give drink</verb>
-		<gerund>giving drink</gerund>
+		<gerund>serving drink</gerund>
 		<priorityInType>79</priorityInType>
 		<prioritizeSustains>true</prioritizeSustains>
 		<requiredCapacities>
@@ -59,6 +59,20 @@
 		<feedHumanlikesOnly>true</feedHumanlikesOnly>
 	</WorkGiverDef>
 
+	<WorkGiverDef  DBHThirst="true">
+		<defName>DBHAdministerFluidsWarden</defName>
+		<label>administer fluids</label>
+		<giverClass>DubsBadHygiene.WorkGiver_AdministerFluids</giverClass>
+		<workType>Warden</workType>
+		<verb>give drink</verb>
+		<gerund>serving drink</gerund>
+		<priorityInType>79</priorityInType>
+		<prioritizeSustains>true</prioritizeSustains>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<feedHumanlikesOnly>true</feedHumanlikesOnly>
+	</WorkGiverDef>
 
 
 

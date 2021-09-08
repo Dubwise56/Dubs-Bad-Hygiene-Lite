@@ -18,6 +18,7 @@
 		<statBases>
 			<SellPriceFactor>0.70</SellPriceFactor>
 		</statBases>
+		<defaultStuff>Steel</defaultStuff>
 	</ThingDef>
 
 
@@ -120,6 +121,7 @@
 		<graphicData>
 			<texPath>DBH/Things/Building/Latrine</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>Cutout</shaderType>
 			<damageData>
 				<rect>(0.2,0.2,0.6,0.6)</rect>
 			</damageData>
@@ -148,6 +150,8 @@
 		<placeWorkers>
 			<li>DubsBadHygiene.PlaceWorker_SewageGrid</li>
 		</placeWorkers>
+		<defaultStuff>WoodLog</defaultStuff>
+		<castEdgeShadows>True</castEdgeShadows>
 	</ThingDef>
 
 	<ThingDef ParentName="BasedHygieneMom">
@@ -193,6 +197,7 @@
 			<Flammability>1.0</Flammability>
 		</statBases>
 		<socialPropernessMatters>true</socialPropernessMatters>
+		<defaultStuff>WoodLog</defaultStuff>
 	</ThingDef>
 
 	<ThingDef ParentName="BasedHygieneMom">
@@ -201,9 +206,9 @@
 		<description>Tub of water used for personal hygiene. Must be regularly refilled with fresh water, also fills with rain water. Can also be used for drinking if thirst is enabled.</description>
 		<thingClass>DubsBadHygiene.Building_washbucket</thingClass>
 		<graphicData>
-			<texPath>DBH/Things/Building/filthyBucket</texPath>
+			<texPath>DBH/Things/Building/cleanBucket</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<shaderType>CutoutComplex</shaderType>
+			<shaderType>Cutout</shaderType>
 			<damageData>
 				<rect>(0.2,0.2,0.6,0.6)</rect>
 			</damageData>
@@ -215,7 +220,7 @@
 		<altitudeLayer>Building</altitudeLayer>
 		<statBases>
 			<MaxHitPoints>75</MaxHitPoints>
-			<WorkToBuild>250</WorkToBuild>
+			<WorkToBuild>250</WorkToBuild> 
 			<Flammability>1.0</Flammability>
 			<Beauty>-5</Beauty>
 			<Cleanliness>-5</Cleanliness>
@@ -250,7 +255,7 @@
 		<graphicData>
 			<texPath>DBH/Things/Building/animalTrough</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<shaderType>CutoutComplex</shaderType>
+			<shaderType>Cutout</shaderType>
 			<drawSize>(2,1)</drawSize>
 		</graphicData>
 		<minifiedDef>MinifiedThing</minifiedDef>
@@ -260,8 +265,15 @@
 		</thingCategories>
 		<altitudeLayer>Building</altitudeLayer>
 		<costList>
-			<Steel>75</Steel>
+			<Steel>15</Steel>
 		</costList>
+		<defaultStuff>Steel</defaultStuff>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Woody</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>60</costStuffCount>
 		<statBases>
 			<MaxHitPoints>75</MaxHitPoints>
 			<WorkToBuild>250</WorkToBuild>
@@ -282,7 +294,53 @@
 			</li>
 			<li Class="CompProperties_Forbiddable"/>
 		</comps>
+		<castEdgeShadows>True</castEdgeShadows>
 	</ThingDef>
+
+
+
+	<ThingDef ParentName="BasedHygieneMom" DBHThirst="true">
+		<defName>PetWaterBowl</defName>
+		<label>Water Bowl</label>
+		<description>Bowl of water used by animals.</description>
+		<thingClass>DubsBadHygiene.Building_WaterTrough</thingClass>
+		<graphicData>
+			<texPath>DBH/Things/Building/PetBowl</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>Cutout</shaderType>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<size>(1,1)</size>
+		<thingCategories>
+			<li>BuildingsHygiene</li>
+		</thingCategories>
+		<altitudeLayer>Building</altitudeLayer>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Woody</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>15</costStuffCount>
+		<statBases>
+			<MaxHitPoints>55</MaxHitPoints>
+			<WorkToBuild>150</WorkToBuild>
+			<Flammability>0</Flammability>
+			<Cleanliness>-5</Cleanliness>
+			<Mass>1</Mass>
+		</statBases>
+		<tickerType>Rare</tickerType>
+		<fillPercent>0.05</fillPercent>
+		<passability>PassThroughOnly</passability>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<pathCost>4</pathCost>
+		<rotatable>false</rotatable>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+	</ThingDef>
+
+
 
 	<ThingDef ParentName="BasedHygieneMom" DBHPetBladder="true">
 		<defName>LitterBox</defName>
@@ -329,6 +387,7 @@
 			</li>
 			<li Class="CompProperties_Forbiddable"/>
 		</comps>
+		<castEdgeShadows>True</castEdgeShadows>
 	</ThingDef>
 
 	<ThingDef ParentName="BasedHygieneMom" DBHLite="true">
@@ -466,7 +525,7 @@
 	</ThingDef>
 
 	
-	<ThingDef ParentName="DubsDirtyBasinBase" DBHThirst="true">
+	<ThingDef ParentName="DubsDirtyBasinBase" DBHThirstAddon="true">
 		<defName>Fountain</defName>
 		<label>fountain</label>
 		<description>A water fountain used for drinking and washing.</description>
@@ -489,9 +548,10 @@
 		<researchPrerequisites>
 			<li MayRequire="dbhlitemode">ModernFixtures</li>
 		</researchPrerequisites>
+		<castEdgeShadows>True</castEdgeShadows>
 	</ThingDef>
 
-	<ThingDef ParentName="DubsDirtyBasinBase" DBHThirst="true">
+	<ThingDef ParentName="DubsDirtyBasinBase" DBHThirstAddon="true">
 		<defName>KitchenSink</defName>
 		<label>kitchen sink</label>
 		<description>Everything but a kitchen sink. Increases room cleanliness.</description>
@@ -525,6 +585,7 @@
 		<researchPrerequisites>
 			<li MayRequire="dbhlitemode">ModernFixtures</li>
 		</researchPrerequisites>
+		<castEdgeShadows>True</castEdgeShadows>
 	</ThingDef>
 
 
@@ -629,6 +690,7 @@
 			<texPath>DBH/Things/Building/BathMat</texPath>
 			<drawSize>(1,1)</drawSize>
 		</graphicData>
+		<defaultStuff>Cloth</defaultStuff>
 		<size>(1,1)</size>
 		<stuffCategories>
 			<li>Fabric</li>
@@ -704,6 +766,7 @@
 				</HeatSources>
 			</li>
 		</modExtensions>
+		<castEdgeShadows>True</castEdgeShadows>
 	</ThingDef>
 
 
