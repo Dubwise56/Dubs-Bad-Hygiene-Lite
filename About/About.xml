@@ -9,4 +9,7 @@
 	</supportedVersions>
 	<packageId>Dubwise.DubsBadHygiene.Lite</packageId>
 	<description>Adds toilets, bathing and hygiene-related needs and mood effects. Lite version of my Bad Hygiene mod</description>
+	<incompatibleWith>
+		<li>Dubwise.DubsBadHygiene</li>
+	</incompatibleWith>
 </ModMetaData>
