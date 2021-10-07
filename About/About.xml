@@ -12,4 +12,10 @@
 	<incompatibleWith>
 		<li>Dubwise.DubsBadHygiene</li>
 	</incompatibleWith>
+	<loadBefore>
+		<li>Dubwise.DubsCentralHeating</li>
+	</loadBefore>
+	<forceLoadBefore>
+		<li>Dubwise.DubsCentralHeating</li>
+	</forceLoadBefore>
 </ModMetaData>
