@@ -266,6 +266,7 @@
 		</graphicData>
 		<castEdgeShadows>false</castEdgeShadows>
 		<size>(3,2)</size>
+		<fillPercent>1.0</fillPercent>
 		<rotatable>true</rotatable>
 		<stuffCategories>
 			<li>Woody</li>

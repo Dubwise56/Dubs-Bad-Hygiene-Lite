@@ -4,12 +4,13 @@
 	<name>Dubs Bad Hygiene Lite</name>
 	<author>Dubwise</author>
 	<modIconPath IgnoreIfNoMatchingField="True">DBH/UI/Logo</modIconPath>
-	<modVersion>3.0.2436</modVersion>
+	<modVersion>3.0.2544</modVersion>
 	<url>https://github.com/Dubwise56/Dubs-Bad-Hygiene/wiki</url>
 	<supportedVersions>
 		<li>1.3</li>
 		<li>1.4</li>
 		<li>1.5</li>
+		<li>1.6</li>
 	</supportedVersions>
 	<packageId>Dubwise.DubsBadHygiene.Lite</packageId>
 	<description>Adds toilets, bathing and hygiene-related needs and mood effects. Lite version of my Bad Hygiene mod</description>
