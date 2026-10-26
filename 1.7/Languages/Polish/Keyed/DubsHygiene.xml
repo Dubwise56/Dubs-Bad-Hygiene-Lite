@@ -192,7 +192,7 @@
 	<RimefellerLinkTip>Zezwolenie na użycie wody do rozłupywarki i rafinerii w Rimefeller</RimefellerLinkTip>
 	<RimatomicsLink>Rimatomia jest połączona</RimatomicsLink>
 	<RimatomicsLinkTip>Zezwolenie na stosowanie wody w urządzeniach chłodniczych w rimatomii</RimatomicsLinkTip>
-	<OverrideNeedSettingsTip>Wyłącz ręcznie potrzeby w oparciu o typ ciała, rasę i stan zdrowia</OverrideNeedSettingsTip>
+	<OverrideNeedSettingsTip>Wyłącz ręcznie potrzeby w oparciu o typ ciała, rasę, stan zdrowia, gen lub cechę</OverrideNeedSettingsTip>
 	<OverrideNeedsSettings>Potrzebuje filtrów</OverrideNeedsSettings>
 	<Disablebladderneed>Wyłącz małą potrzebę</Disablebladderneed>
 	<Disablehygieneneed>Wyłącz potrzebę higieny</Disablehygieneneed>
@@ -243,5 +243,12 @@
 	<HydroponicsLink>Hydroponics</HydroponicsLink>
 	<HydroponicsLinkTip>Powered growing buildings like hydroponics have water tanks that require filling from pipes. Plants die from lack of water instead of power, but water tanks only fill when the building is powered.</HydroponicsLinkTip>
 	<ThirstRequiresRestart>A restart is required to add and remove thirst-related items.\n\nRestart now?</ThirstRequiresRestart>
+
+	<ChildrenGetNeeds>Dzieci</ChildrenGetNeeds>
+	<ChildrenGetNeedsTip>Określ, czy dzieci mają mieć potrzeby. Niemowlęta nigdy nie mają potrzeby pęcherza.</ChildrenGetNeedsTip>
+	<ChildrenGetThirst>Pragnienie dzieci</ChildrenGetThirst>
+	<ChildrenGetThirstTip>Dzieci mają potrzebę pragnienia. Niemowlęta nigdy.</ChildrenGetThirstTip>
+	<DBHVacuum>W próżni</DBHVacuum>
+	<dbh.restartlater>Później</dbh.restartlater>
 
 </LanguageData>

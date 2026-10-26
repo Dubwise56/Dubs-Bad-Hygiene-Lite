@@ -205,4 +205,10 @@
 		<reportString>unclogging the blocked TargetA</reportString>
 	</JobDef>
 
+	<JobDef>
+		<defName>DBHRelieveInVacSuit</defName>
+		<driverClass>DubsBadHygiene.JobDriver_RelieveInVacSuit</driverClass>
+		<reportString>relieving in vac suit</reportString>
+	</JobDef>
+
 </Defs>

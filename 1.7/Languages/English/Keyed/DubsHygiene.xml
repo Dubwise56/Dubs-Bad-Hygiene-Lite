@@ -210,7 +210,7 @@
 	<RimefellerLinkTip>Enable water usage on crackers and refiners in Rimefeller.</RimefellerLinkTip>
 	<RimatomicsLink>Rimatomics link</RimatomicsLink>
 	<RimatomicsLinkTip>Enable water usage on cooling towers in Rimatomics.</RimatomicsLinkTip>
-	<OverrideNeedSettingsTip>Manually disable needs by body type, race, or active hediff.</OverrideNeedSettingsTip>
+	<OverrideNeedSettingsTip>Manually disable needs by body type, race, active hediff, gene or trait.</OverrideNeedSettingsTip>
 	<OverrideNeedsSettings>Needs filter</OverrideNeedsSettings>
 	<Disablebladderneed>Disable bladder need</Disablebladderneed>
 	<Disablehygieneneed>Disable hygiene need</Disablehygieneneed>
@@ -262,4 +262,10 @@
 	<HydroponicsLinkTip>Powered growing buildings like hydroponics have water tanks that require filling from pipes. Plants die from lack of water instead of power, but water tanks only fill when the building is powered.</HydroponicsLinkTip>
 	<ThirstRequiresRestart>A restart is required to add and remove thirst-related items.\n\nRestart now?</ThirstRequiresRestart>
 
+	<DBHVacuum>In a vacuum</DBHVacuum>
+	<dbh.restartlater>Later</dbh.restartlater>
+	<ChildrenGetNeeds>Children</ChildrenGetNeeds>
+	<ChildrenGetNeedsTip>Set if children should have needs. Babies never have a bladder need.</ChildrenGetNeedsTip>
+	<ChildrenGetThirst>Child thirst</ChildrenGetThirst>
+	<ChildrenGetThirstTip>Children get the thirst need. Babies never do.</ChildrenGetThirstTip>
 </LanguageData>
